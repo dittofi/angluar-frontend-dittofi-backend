@@ -26,17 +26,17 @@ export class RunEndpointFormComponent implements OnInit {
       break;
       case "post":
         this.http.post<any>(`${endpoint.baseURL}${endpoint.path}`, endpoint.body).subscribe(data => {
-          console.log(data)
+          this.model.response = JSON.stringify(data);
       });
       break;
       case "put":
         this.http.put<any>(`${endpoint.baseURL}${endpoint.path}`, endpoint.body).subscribe(data => {
-          console.log(data)
+          this.model.response = JSON.stringify(data);
       });
       break;
       case "delete":
         this.http.put<any>(`${endpoint.baseURL}${endpoint.path}`, endpoint.body).subscribe(data => {
-          console.log(data)
+          this.model.response = JSON.stringify(data);
       });
       break;
       default:
@@ -44,6 +44,6 @@ export class RunEndpointFormComponent implements OnInit {
     }
   }
 
-  model = new Endpoint("/", "Get", "", "https://dittofi.com:/1221/iapi", "");
+  model = new Endpoint("/", "Get", "", "<ENTER YOUR URL>", "");
 
 }
