@@ -44,6 +44,6 @@ export class RunEndpointFormComponent implements OnInit {
     }
   }
 
-  model = new Endpoint("/", "Get", "", "https://dittofi.com:/1388/iapi/");
+  model = new Endpoint("/", "Get", "", "<ENTER YOUR URL>");
 
 }
