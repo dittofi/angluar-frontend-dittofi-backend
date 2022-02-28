@@ -21,7 +21,7 @@ export class RunEndpointFormComponent implements OnInit {
     switch(endpoint.method.toLowerCase()) {
       case "get":
         this.http.get<any>(`${endpoint.baseURL}${endpoint.path}`).subscribe(data => {
-          console.log(data)
+          this.model.response = JSON.stringify(data);
       });
       break;
       case "post":
@@ -44,6 +44,6 @@ export class RunEndpointFormComponent implements OnInit {
     }
   }
 
-  model = new Endpoint("/", "Get", "", "<ENTER YOUR URL>");
+  model = new Endpoint("/", "Get", "", "https://dittofi.com:/1221/iapi", "");
 
 }

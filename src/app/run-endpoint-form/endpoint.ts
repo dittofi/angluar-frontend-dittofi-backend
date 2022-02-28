@@ -6,7 +6,8 @@ export class Endpoint {
 		public path: string,
 		public method: string,
 		public body: string,
-		public baseURL: string
+		public baseURL: string,
+		public response: string
 	) {  
 
 	}
