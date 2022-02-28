@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Request</h1>
+			<form>
+				<div class="form-group mb-3">
+					<label>Endpoint path</label>
+					<input
+						class="form-control"
+						name="path"
+						[(ngModel)]="model.path"
+						type="text" 
+						placeholder="Enter path"
+					/>
+				</div>
+				<div class="form-group mb-3">
+					<label>Endpoint method</label>
+					<select
+						class="form-select"
+						name="method"
+						[(ngModel)]="model.method"
+					>
+						<option value="Get">Get</option>
+						<option value="Put">Put</option>
+						<option value="Post">Post</option>
+						<option value="Delete">Delete</option>
+					</select>
+				</div>
+				<div class="form-group mb-3">
+					<label>Body (raw)</label>
+					<textarea
+						class="form-control"
+						name="body"
+						[(ngModel)]="model.body"
+						placeholder="Enter body data"
+					>
+					</textarea>
+				</div>
+				<button
+					(click)="runEndpoint(model)"
+					class="btn btn-primary"
+					variant="primary" 
+					type="button"
+				>
+					Fetch
+				</button>
+			</form>
+		</div>
+		<div class="col">
+			<h1>Response</h1>
+			<code>
+				
+			</code>
+		</div>
+	</div>
+</div>
